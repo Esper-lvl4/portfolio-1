@@ -1,0 +1,732 @@
+/* Глобальные стили*/
+
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,400i,600,700');
+
+.wrap {
+	color: #ffffff;
+	width: 100%;
+	display: flex;
+	flex-flow: column wrap;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+a {
+	display: block;
+	text-decoration: none;
+	color: #ffffff;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+h2 {
+	font-size: 40px;
+	font-weight: bold;
+	letter-spacing: 6px;
+	text-transform: uppercase;
+	margin: 20px 0;
+}
+h3 {
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.none {
+	display: none;
+}
+.site_size {
+	max-width: 1100px;
+	padding: 100px 0 100px;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	text-align: center;
+} 
+.block_head {
+	width: 80%;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+}
+.line {
+	width: 85px;
+	height: 5px;
+	margin: 0 auto 22px;
+}
+.big_button {
+	width: 293px;
+    height: 25px;
+    padding: 20px 0;
+    margin: 5% auto 0;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Размеры шрифта у описания блока */
+
+.description {
+	font-size: 18px;
+}
+
+
+/* Стили блоков */
+	
+/*	header_block */
+
+#header_block {
+	background-color: #87509c;
+}
+#header_block .site_size {
+	display: grid;
+	grid: [row1-start] "logo navi"  45px [row1-end]
+		  [row2-start] "greet greet" auto [row2-end]/ 118px auto;
+}
+
+.head_logo {
+	width: 118px;
+	height: 37px;
+	margin-left: 10%;
+	align-self: center;
+	grid-area: logo;
+	background: url('img/logo.png') no-repeat 50% 50%;
+}
+
+.head_navi {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+	grid-area: navi;
+	font-size: 16px;
+	margin-right: 3%;
+}
+.head_navi a {
+	align-self: center;
+	margin: 0 0 0 5px;
+	padding: 10px 15px;
+	border-radius: 5px;
+	text-align: center;
+}
+.head_navi a:hover {
+	background-color: #643a79;
+}
+
+.head_greet {
+	grid-area: greet;
+	width: 95%;
+	justify-self: center;
+	align-self: center;
+	padding: 10% 0;
+}
+.head_greet div {
+	width: 100%;
+	font-size: 41px;
+	font-weight: bold;
+	text-align: center;
+}
+#head_button {
+	background-color: #eb7d4b;
+	border-bottom: 5px solid #c86a40;
+}
+#head_button:hover {
+	background-color: #fb9d6b;
+	border-bottom-color: #d87a50;
+}
+
+/*	services_block */
+
+#services_block {
+	background-color: #17c2a4;
+}
+
+.services_hr {
+	background-color: #14a58c;
+}
+
+.services_options {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	margin: 5% 0 0;
+	width: 100%;
+}
+.services_options > div {
+	width: 250px;
+	padding-top: 125px;
+	margin-bottom: 20px;
+}
+.services_brand {
+	background: url('img/flag.png') no-repeat 50% 0%;
+}
+.services_design {
+	background: url('img/pen.png') no-repeat 55% 0%;
+}
+.services_develop {
+	background: url('img/cogs.png') no-repeat 50% 0%;
+}
+.services_rocket {
+	background: url('img/rocket.png') no-repeat 50% -10%;
+}
+
+
+/*	team_block */
+
+#team_block {
+	background-color: #e7f1f8;
+	color: #3c4761;
+}
+#team_block a {
+	color: #3c4761;
+}
+
+.team_hr {
+	background-color: #c8d9e5;
+}
+
+.team_people {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	margin: 4% 0 0;
+}
+.team_people > div {
+	width: 240px;
+	margin-bottom: 20px;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+}
+.team_people > div > img{
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+}
+.team_people h3 {
+	margin: 4% 0 0;
+}
+.team_title {
+	color: #48c1e9;
+	text-transform: capitalize;
+	margin: 0 0 20px;
+}
+
+.team_social {
+	width: 100%;
+	margin: 30px auto 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+}
+
+.team_social a {
+	width: 30px;
+	height: 30px;
+	background-color: #bdd1df;
+	border-radius: 50%;
+}
+.team_social a:hover {
+	background-color: #999999;
+}
+.team_facebook {
+	background: url('img/facebook.png') no-repeat 50% 50%;
+}
+.team_twitter {
+	background: url('img/twitter.png') no-repeat 50% 50%;
+}
+.team_instagram {
+	background: url('img/instagram.png') no-repeat 50% 50%;
+}
+.team_email {
+	background: url('img/mail.png') no-repeat 50% 50%;
+}
+
+
+/*	skills_block */
+
+#skills_block {
+	background-color: #ffffff;
+	color: #3c4761;
+}
+
+.skills_hr {
+	background-color: #dfe8ed;
+}
+
+.skills_graphs {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	width: 100%;
+}
+.graph {
+	width: 200px;
+	height: 200px;
+}
+
+/*	portfolio_block */
+
+#portfolio_block {
+	background-color: #ffdd99;
+	color: #3c4761;
+}
+.portfolio_hr {
+	background-color: #e5c37f;
+}
+
+.portfolio_navi {
+	width: 380px;
+	margin: 60px auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+.portfolio_navi button {
+	padding: 10px 25px;
+	color: #3c4761;
+	background-color: #ebc985;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+.portfolio_navi button:hover {
+	background-color: #ffffff;
+}
+
+#portfolio_collection {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+}
+#portfolio_collection h3 {
+	font-size: 18px;
+	font-weight: 400;
+	color: #534f46;
+	margin: 20px 0 60px;
+}
+
+#portfolio_collection img {
+	width: 540px;
+}
+
+#portfolio_load {
+	background-color: #17c2a4;
+	border-bottom: 5px solid #14a58c;
+}
+#portfolio_load:hover {
+	background-color: #27d3b4;
+	border-bottom-color: #24b59c;
+}
+
+/*	feedback_block */
+
+#feedback_block {
+	background-color: #d74680;
+}
+
+.feedback_hr {
+	background-color: #b73c6d;
+}
+
+.feedback_comments {
+	width: 100%;
+	margin: 60px 0 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+}
+.feedback_comments > div {
+	width: 540px;
+	margin: 0 10px 150px;
+	display: grid;
+	grid: [row1-start] "image info" auto [row1-end]
+		  [row2-start] "name name" 35px [row2-end]
+		  [row3-start] "title title" 20px [row3-end] / 140px auto;
+}
+.feedback_comments img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	grid-area: image;
+}
+.feedback_info {
+	grid-area: info;
+	font-size: 21px;
+	font-style: italic;
+	text-align: left;
+}
+.feedback_comments h3 {
+	grid-area: name;
+	margin: 0 0 10px;
+}
+.feedback_title {
+	grid-area: title;
+	color: #fcd397;
+}
+
+/*	footer_block */
+
+#contact_block {
+	background-color: #3c5499;
+}
+
+.contact_hr {
+	background-color: #273a71;
+}
+
+#contact_form {
+	width: 90%;
+	margin: 50px 0 40px;
+	display: grid;
+	grid: [row1-start] "name email town" 55px [row1-end]
+		  [row2-start] "message message message" 235px [row2-end]
+		  [row3-start] ". submit ." auto [row3-end] / 32% 32% 32%;
+	grid-gap: 15px 2%;
+	position: relative;
+}
+#contact_form > input, #contact_form > textarea {
+	padding: 10px 20px;
+	background-color: #273a71;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	color: #ffffff;
+	font-size: 18px;
+}
+#contact_form > input::placeholder, #contact_form > textarea::placeholder {
+	color: #ffffff;
+} 
+#contact_name {
+	grid-area: name;
+}
+#contact_email {
+	grid-area: email;
+}
+#contact_town {
+	grid-area: town;
+}
+#contact_message {
+	grid-area: message;
+}
+#contact_towns {
+	list-style: none;
+	padding: 0;
+	width: 32%;
+	max-height: 300px;
+	background-color: #273a71;
+	overflow: scroll;
+	position: absolute;
+	top: 38px;
+	right: 0;
+}
+#contact_towns li:hover {
+	display: block;
+	background-color: #3c5499;
+	cursor: pointer;
+}
+#contact_submit {
+	display: block;
+	grid-area: submit;
+	height: 65px;
+	background-color: #30bae7;
+	color: #ffffff;
+	border-top: 0px solid transparent;
+	border-left: 0px solid transparent;
+	border-right: 0px solid transparent;
+	border-bottom: 5px solid #299ec5;
+}
+#contact_submit:hover {
+	background-color: #27d3b4;
+	border-bottom-color: #24b59c;
+}
+
+#footer {
+	background-color: #344b8e;
+}
+#footer .site_size {
+	padding: 0;
+}
+
+.floor {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	font-size: 24px;
+	font-weight: 600;
+}
+.floor a {
+	width: 150px;
+	padding: 40px 0;
+	text-align: center;
+	text-transform: capitalize;
+}
+.floor a:hover {
+	color: #30bae7;
+}
+
+
+/* Медиа запросы (размеры сайта и шрифта) */
+
+@media (min-width: 992px) and (max-width: 1099.98px) { 
+	
+	.wrap {
+		font-size: 16px;
+	}
+	.site_size {
+		min-width: 992px;
+		padding: 90px 0 90px;
+	} 
+	.description {
+		font-size: 18px;
+	}
+	h2 {
+		font-size: 35px;
+		letter-spacing: 5px;
+		margin: 19px 0;
+	}
+	h3 {
+		font-size: 24px;
+	}
+	.head_greet div {
+		font-size: 35px;
+	}
+	.big_button {
+		width: 270px;
+		padding: 15px 0;
+	}
+
+	/* fixes */
+
+	.feedback_info {
+		font-size: 20px;
+	}
+
+
+ }
+
+ @media (min-width: 768px) and (max-width: 991.98px) { 
+
+ 	.wrap {
+		font-size: 15px;
+	}
+	.site_size {
+		min-width: 760px;
+		padding: 75px 0 75px;
+	} 
+	.description {
+		font-size: 17px;
+	}
+	h2 {
+		font-size: 30px;
+		letter-spacing: 4px;
+		margin: 18px 0;
+	}
+	h3 {
+		font-size: 22px;
+	}
+	.head_greet div {
+		font-size: 30px;
+	}
+	.big_button {
+		width: 270px;
+		padding: 15px 0;
+	}
+
+	/* fixes */
+
+	.feedback_info {
+		font-size: 19px;
+	}
+	#contact_form {
+		margin: 40px 0 30px;
+		display: grid;
+		grid: [row1-start] "name email" 55px [row1-end]
+			  [row2-start] "town town" 55px [row2-end]
+			  [row3-start] "message message" 235px [row3-end]
+			  [row4-start] "submit submit" auto [row4-end] / 49% 49%;
+		grid-gap: 15px 2%;
+
+	}
+	#contact_towns {
+		width: 100%;
+		top: 93px;
+	}
+
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+	.wrap {
+		font-size: 15px;
+	}
+	.site_size {
+		min-width: 570px;
+		padding: 60px 0 60px;
+	} 
+	.description {
+		font-size: 16px;
+	}
+	h2 {
+		font-size: 25px;
+		letter-spacing: 3px;
+		margin: 17px 0;
+	}
+	h3 {
+		font-size: 20px;
+	}
+	.head_greet div {
+		font-size: 25px;
+	}
+	.big_button {
+		width: 230px;
+		padding: 12px 0;
+	}
+
+	/* fixes */
+
+	.feedback_info {
+		font-size: 19px;
+	}
+	.feedback_comments {
+		margin-top: 20px;
+	}
+	.feedback_comments > div {
+	    width: 540px;
+	    margin: 0 10px 20px;
+	    display: grid;
+	    grid: [row1-start] "image info" auto [row1-end]
+	 		  [row2-start] "name name" 25px [row2-end]
+			  [row3-start] "title title" 20px [row3-end] / 110px auto;
+	}
+	#contact_form {
+		margin: 30px 0 20px;
+		display: grid;
+		grid: [row1-start] "name" 55px [row1-end]
+			  [row2-start] "email" 55px [row2-end]
+			  [row3-start] "town" 55px [row3-end]
+			  [row4-start] "message" 235px [row4-end]
+			  [row5-start] "submit" auto [row5-end] / 100%;
+		grid-gap: 10px 0;
+	}
+	#contact_towns {
+		width: 100%;
+		top: 168px;
+	}
+	.floor a {
+	    width: 150px;
+	    padding: 0;
+	}
+
+}
+
+
+@media (max-width: 575.98px) { 
+
+	.wrap {
+		font-size: 15px;
+	}
+	.site_size {
+		min-width: 250px;
+		padding: 40px 0 40px;
+	} 
+	.description {
+		font-size: 16px;
+	}
+	h2 {
+		font-size: 23px;
+		letter-spacing: 3px;
+		margin: 16px 0;
+	}
+	h3 {
+		font-size: 19px;
+	}
+	.head_greet div {
+		font-size: 23px;
+	}
+	.big_button {
+		width: 230px;
+		padding: 12px 0;
+	}
+
+	/* fixes */
+
+	#header_block .site_size {
+	    display: grid;
+	    grid: [row1-start] "logo" auto [row1-end]
+	    	  [row2-start] "navi" auto [row3-end]
+	 		  [row3-start] "greet" auto [row3-end]/ 95%;
+	 	grid-gap: 8px 0;
+	}
+	.head_logo {
+		margin: 0;
+		place-self: center center;
+	}
+	.head_navi {
+		justify-content: space-evenly;
+	}
+	.head_navi a {
+		width: 40%;
+	}
+	#portfolio_collection img {
+		width: 340px;
+	}
+	.portfolio_navi {
+		width: 95%;
+	}
+	.portfolio_navi button {
+		width: 80%;
+		margin-bottom: 8px;
+	}
+	.feedback_info {
+		font-size: 19px;
+	}
+	.feedback_comments {
+		margin-top: 20px;
+	}
+	.feedback_comments > div {
+	    width: 95%;
+	    margin: 0 10px 20px;
+	    display: grid;
+	    grid: [row1-start] "image info" auto [row1-end]
+	 		  [row2-start] "name name" 25px [row2-end]
+			  [row3-start] "title title" 20px [row3-end] / 110px auto;
+	}
+	#contact_form {
+		margin: 30px 0 20px;
+		display: grid;
+		grid: [row1-start] "name" 55px [row1-end]
+			  [row2-start] "email" 55px [row2-end]
+			  [row3-start] "town" 55px [row3-end]
+			  [row4-start] "message" 235px [row4-end]
+			  [row5-start] "submit" auto [row5-end] / 100%;
+		grid-gap: 10px 0;
+	}
+	#contact_towns {
+		width: 100%;
+		top: 168px;
+	}
+	.floor a {
+	    width: 95%;
+	    padding: 0;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
